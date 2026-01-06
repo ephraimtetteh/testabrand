@@ -1,32 +1,13 @@
 import React from 'react'
-import logo from '../assets/tlogo.png'
-import { Link } from 'react-router-dom'
+import { Link, Links } from 'react-router-dom'
 import { IoLocationOutline } from "react-icons/io5";
-
-const menus = [
-  {name: 'Work', href: '/work'},
-  {name: 'About', href: '/about'},
-  {name: 'Services', href: '/services'},
-  {name: 'Contact', href: '/contact'},
-  {name: 'Testimonials', href: '/testimonials'},
-]
-
-const services = [
-  { name: "Strategy", href: "/services" },
-  { name: "Design", href: "/services" },
-  { name: "Insight", href: "/services" },
-  { name: "Creative Content", href: "/services" },
-  { name: "Web Development", href: "/services" },
-  { name: "Digital Marketing", href: "/services" },
-];
-
-const socials = [
-  { name: "Instagram", href: "/services" },
-  { name: "Twitter", href: "/services" },
-  { name: "LinkedIn", href: "/services" },
-  { name: "Facebook", href: "/services" },
-  
-];
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter
+ } from "react-icons/fa6";
+import { assets } from '../assets/assets';
+import Button from './Button';
+import { aiServices, creativeDesigns, marketingServices, productionServices } from '../../constant/services';
+import { ArrowUpRight } from '../icons';
+import { legal, navLinks } from '../../constant/links';
 
 
 
@@ -34,72 +15,150 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className="bg-white bottom-0 right-0 left-0 relative flex flex-col  mt-20 text-gray-600">
-      <section className=" lg:flex md:grid-cols-2 justify-between items-center border-t border-b border-gray-200 py-10 lg:px-20 px-6">
-        {/* ============= right */}
-        <div className="">
-          <img src={logo} alt="" className="w-24" />
-        </div>
-        <div className="grid lg:flex gap-24">
-          <div className="grid lg:flex flex-col gap-2">
-            <h3 className="font-semibold text-2xl pb-4">Menu</h3>
-            {menus.map((menu) => (
-              <Link to={menu.href} key={menu.length} className="text-gray-600">
-                {menu.name}
-              </Link>
-            ))}
+    <footer
+      className="relative bg-no-repeat bg-cover bg-center flex-1 min-h-screen text-white"
+      style={{ backgroundImage: `url(${assets.footerbg})` }}
+    >
+      <div className="absolute top-0 left-0 right-0 bottom-0 h-screen bg-black/40"></div>
+
+      <div className="flex flex-col items-center justify-center lg:pt-40 lg:pb-20 pt-20 pb-10">
+        <h1 className="lg:text-7xl text-2xl text-white z-10">
+          Testa Company Limited
+        </h1>
+        <p className="z-10 lg:text-2xl pb-2">
+          Creative Powerhouse Strategy & Design
+        </p>
+        <Button text={"Let's Talk"} />
+      </div>
+
+      <div className=" bg-linear-to-b from-black/40  to-black py-8">
+        <div className="flex flex-1 gap-20 px-3 md:px-6 lg:px-12 xl:px-12 transition-all duration-500 z-10">
+          {/* left side */}
+          <div className=" w-full border-t border-white/50 z-10">
+            <h3 className=" pt-4 lg:pb-10 pb-5 text-2xl">Services</h3>
+            <div className="flex flex-row gap-10">
+              <div className="">
+                <a href={"/"} className="flex items-center gap-3">
+                  <h4 className="text-[20px] py-1">Creative Design Services</h4>
+                  <ArrowUpRight />
+                </a>
+                {creativeDesigns.map((item) => (
+                  <p
+                    key={item.length}
+                    className="py-2 font-light text-[16px] text-white/80"
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
+              <div>
+                <a href={"/"} className="flex items-center gap-3">
+                  <h4 className="text-[20px] py-1">
+                    Specialized Production Services
+                  </h4>
+                  <ArrowUpRight />
+                </a>
+                {productionServices.map((item) => (
+                  <p
+                    key={item.length}
+                    className="py-2 font-light text-[16px] text-white/80"
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
 
-          <div className="grid lg:flex flex-col gap-2">
-            <h3 className="font-semibold text-2xl pb-4">Services</h3>
-            {services.map((service) => (
-              <Link
-                to={service.href}
-                key={service.length}
-                className="text-gray-600"
+          {/* right side */}
+          <div className=" w-full border-t border-white/50 z-10">
+            <h3 className=" pt-4 lg:pb-10 pb-5 text-2xl">Navigation</h3>
+            <div className="flex flex-row gap-10">
+              <div className="">
+                <a href={"/"} className="flex items-center gap-3">
+                  <h4 className="text-[20px] py-1">Main</h4>
+                  <ArrowUpRight />
+                </a>
+                {navLinks.map((item) => (
+                  <p
+                    key={item.length}
+                    className="py-2 font-light text-[16px] text-white/80"
+                  >
+                    {item.name}
+                  </p>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-10 z-10">
+                <div>
+                  <a href={"/"} className="flex items-center gap-3">
+                    <h4 className="text-[20px] py-1">AI Services</h4>
+                    <ArrowUpRight />
+                  </a>
+                  {aiServices.map((item) => (
+                    <p
+                      key={item.length}
+                      className="py-2 font-light text-[16px] text-white/80"
+                    >
+                      {item}
+                    </p>
+                  ))}
+                </div>
+
+                <div>
+                  <a href={"/"} className="flex items-center gap-3">
+                    <h4 className="text-[20px] py-1">Marketing Services</h4>
+                    <ArrowUpRight />
+                  </a>
+                  {marketingServices.map((item) => (
+                    <p
+                      key={item.length}
+                      className="py-2 font-light text-[16px] text-white/80"
+                    >
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-between py-2 px-3 md:px-6 lg:px-12 xl:px-12  text-center z-10">
+          <div>
+            <img src={assets.logo} alt="" className="invert" />
+            &copy; copyright 2019, Testa Brands.
+          </div>
+          <div className='z-10 flex items-center gap-2'>
+            {legal.map((item) => (
+              <p
+                key={item.length}
+                className="py-2 font-light text-[16px] text-white/80 underline"
               >
-                {service.name}
-              </Link>
+                {item.name}
+              </p>
             ))}
           </div>
-
-          <div className="grid lg:flex flex-col gap-2">
-            <h3 className="font-semibold text-2xl pb-4">Socials</h3>
-            {socials.map((service) => (
-              <Link
-                to={service.href}
-                key={service.length}
-                className="text-gray-600"
-              >
-                {service.name}
-              </Link>
-            ))}
+          <div className="z-20 flex flex-row gap-3 items-center">
+            <FaFacebookF
+              size={52}
+              className="rounded-full p-3 border border-white"
+            />
+            <FaInstagram
+              size={52}
+              className="rounded-full p-3 border border-white"
+            />
+            <FaLinkedinIn
+              size={52}
+              className="rounded-full p-3 border border-white"
+            />
+            <FaTwitter
+              size={52}
+              className="rounded-full p-3 border border-white"
+            />
+            <img src={assets.logo} alt="" className="invert size-20" />
           </div>
         </div>
-      </section>
-
-      {/* ============= location */}
-      <section className="py-10 lg:px-20 px-6 border-b border-gray-200 grid lg:flex justify-between items-center">
-        <div className="grid lg:flex">
-          <IoLocationOutline className="text-orange-500 w-24" />
-          <p>Spintex Flower port, palace mall</p>
-        </div>
-        <div className="gird lg:flex">
-          <IoLocationOutline className="text-orange-500 w-24" />
-          <p>123 445 676 </p>
-        </div>
-      </section>
-
-      {/* ============= copyrght */}
-      <section className="py-10 lg:px-20 px-6 border-b border-gray-200 grid lg:flex justify-between items-center">
-        <div>
-          <p>&copy; 2020 Testa Brands</p>
-        </div>
-        <div className="flex gap-12">
-          <div>Terms & Conditions</div>
-          <div>Privacy Policy</div>
-        </div>
-      </section>
+      </div>
     </footer>
   );
 }

@@ -1,10 +1,10 @@
-import WorkComponent from "../components/WorkComponent"
+
 
 const Work = () => {
   return (
     <div>
         return (
-          <WorkComponent  />
+     <h1>Work</h1>
         )
     </div>
   )

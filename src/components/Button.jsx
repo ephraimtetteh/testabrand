@@ -1,12 +1,16 @@
 import React from 'react'
 
-const Button = ({text, icon}) => {
+const Button = ({text, onClick}) => {
   return (
-    <button className='w-fit bg-orange-500 p-4 rounded-b-full flex items-center justify-between'>
-      <p>{text}</p>
-      <span className='bg-white text-orange-500 items-center w-24'>{icon}</span>
-    </button>
-  )
+    <div>
+      <button
+        className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 bg-black text-white`}
+        onClick={onClick}
+      >
+        {text}
+      </button>
+    </div>
+  );
 }
 
 export default Button
