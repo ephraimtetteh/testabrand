@@ -10,7 +10,9 @@ import { ArrowUpRight } from '../icons';
 import { legal, navLinks } from '../../constant/links';
 
 
-
+const GetFullYear = () => {
+  return new Date().getFullYear()
+}
 
 
 const Footer = () => {
@@ -126,7 +128,7 @@ const Footer = () => {
         <div className="flex items-center justify-between py-2 px-3 md:px-6 lg:px-12 xl:px-12  text-center z-10">
           <div>
             <img src={assets.logo} alt="" className="invert" />
-            &copy; copyright 2019, Testa Brands.
+            &copy; copyright <GetFullYear />, Testa Brands.
           </div>
           <div className='z-10 flex items-center gap-2'>
             {legal.map((item) => (
