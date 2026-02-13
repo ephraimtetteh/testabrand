@@ -1,15 +1,9 @@
 import React from 'react'
-import Title from './Title'
-import CTA from './CTA'
-import FQA from './FQA'
+import CTA from '../components/CTA'
 
-const Index = () => {
+const About = () => {
   return (
-    <div className="mt-20">
-      {/* <Title
-        text={"Trusted by 50+ of worlds top brand "}
-        className={"lg:text-2xl"}
-      /> */}
+    <div>
       <CTA
         text={"AI design services"}
         title={"Save up to 70% on production costs"}
@@ -17,9 +11,8 @@ const Index = () => {
           "Customers like them, them, spend less than half of what they normally would on simnilar projects Customers like them, them, spend less than half of what they normally would on simnilar projects"
         }
       />
-      <FQA />
     </div>
   );
 }
 
-export default Index
+export default About
