@@ -10,7 +10,7 @@ const CTA = ({text, title, desc}) => {
     >
       <div className="text-black/90 p-10">
         <p className="py-3 px-5 uppercase text-[18px]">{text}</p>
-        <h2 className="px-5 py-2 text-6xl text-white/90">{title}</h2>
+        <h2 className="px-5 py-2 lg:text-6xl md:text-3xl sm:text-xl text-white/90">{title}</h2>
         <p className="break-all px-5 pb-4 w-[70%]">{desc}</p>
         <Button text="Book a demon" className="bg-green-800 text-black" />
       </div>

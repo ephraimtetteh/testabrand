@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
 
       <div className=" bg-linear-to-b from-black/40  to-black py-8">
-        <div className="flex flex-1 gap-20 px-3 md:px-6 lg:px-12 xl:px-12 transition-all duration-500 z-10">
+        <div className="lg:flex flex-1 gap-20 px-3 md:px-6 lg:px-12 xl:px-12 transition-all duration-500 z-10">
           {/* left side */}
           <div className=" w-full border-t border-white/50 z-10">
             <h3 className=" pt-4 lg:pb-10 pb-5 text-2xl">Services</h3>
@@ -54,7 +54,7 @@ const Footer = () => {
                 ))}
               </div>
               <div>
-                <a href={"/"} className="flex items-center gap-3">
+                <a href={"/"} className="lg:flex items-center gap-3">
                   <h4 className="text-[20px] py-1">
                     Specialized Production Services
                   </h4>
@@ -125,12 +125,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between py-2 px-3 md:px-6 lg:px-12 xl:px-12  text-center z-10">
+        <div className="lg:flex items-center justify-between py-2 px-3 md:px-6 lg:px-12 xl:px-12  text-center z-10">
           <div>
             <img src={assets.logo} alt="" className="invert" />
             &copy; copyright <GetFullYear />, Testa Brands.
           </div>
-          <div className='z-10 flex items-center gap-2'>
+          <div className='z-10 flex items-center gap-2 justify-center'>
             {legal.map((item) => (
               <p
                 key={item.length}
@@ -140,7 +140,7 @@ const Footer = () => {
               </p>
             ))}
           </div>
-          <div className="z-20 flex flex-row gap-3 items-center">
+          <div className="z-20 flex flex-row gap-3 items-center justify-center">
             <FaFacebookF
               size={52}
               className="rounded-full p-3 border border-white"
