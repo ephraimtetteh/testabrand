@@ -5,7 +5,7 @@ import { assets } from '../assets/assets'
 const CTA = ({text, title, desc}) => {
   return (
     <div
-      className=" bg-[url('./src/assets/Sheenah 2.png')] bg-cover bg-center rounded-xl mx-15 flex flex-col flex-1 relative mt-30 mb-5 backdrop-blur-4xl"
+      className=" bg-[url('./src/assets/Sheenah 2.png')] bg-cover bg-center rounded-xl flex flex-col flex-1 relative mt-30 mb-5 backdrop-blur-4xl"
       style={{ backgroundImage: `url(${assets.footerbg})` }}
     >
       <div className="text-black/90 p-10">

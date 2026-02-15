@@ -8,7 +8,7 @@ const Navbar = () => {
     { name: "Services", path: "/services", icon: <IoChevronDown /> },
     { name: "Our work", path: "/work" },
     { name: "Why us", path: "/experience" ,icon: <IoChevronDown /> },
-    { name: "Pricing", path: "/about" },
+    { name: "Pricing", path: "/pricing" },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
