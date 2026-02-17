@@ -5,7 +5,7 @@ import { plans } from '../../constant/data';
 
 const PlanCard = () => {
   return (
-    <div className="grid lg:grid-cols-2 gap-6">
+    <div className="grid lg:grid-cols-2 gap-6 mb-20">
       <div
         className=" relative flex flex-col flex-1 py-15 px-12 bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${assets.footerbg})` }}
