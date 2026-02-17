@@ -5,23 +5,8 @@ const TrustedBy = () => {
   return (
     <div>
         <>
-            <style>{`
-                .marquee-inner {
-                    animation: marqueeScroll linear infinite;
-                }
 
-                @keyframes marqueeScroll {
-                    0% {
-                        transform: translateX(0%);
-                    }
-
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
-            `}</style>
-
-            <div className="overflow-hidden w-full relative max-w-7xl mx-auto select-none mt-20">
+            <div className="overflow-hidden w-full relative max-w-7xl mx-auto select-none">
                 <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-linear-to-r from-white to-transparent" />
                 <div className="marquee-inner flex will-change-transform min-w-[200%]" style={{ animationDuration: "55s" }}>
                     <div className="flex">

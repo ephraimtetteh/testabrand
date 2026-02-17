@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import WorkDetails from './pages/WorkDetails';
 import Pricing from './pages/Pricing';
+import Newsletter from './components/NewLetter';
 
 const App = () => {
   return (
@@ -16,11 +17,12 @@ const App = () => {
       <Routes>
         <Route path='/' element={ <Home />} />
         <Route path='/pricing' element={ <Pricing />} />
-        <Route path='/work' element={<Work />} />
+        <Route path='/our-work' element={<Work />} />
         <Route path='/work/:id' element={<WorkDetails />} />
         <Route path='/services' element={<Services />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/contact-us' element={<Contact />} />
       </Routes>
+      <Newsletter />
       <Footer />
     </div>
   )

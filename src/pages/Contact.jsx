@@ -1,128 +1,93 @@
-import React from 'react'
-import { assets } from '../assets/assets';
-import { Link } from 'react-router-dom';
-import Button from '../components/Button';
-import { IoLocationOutline } from "react-icons/io5";
-
 const Contact = () => {
-
   return (
-    <section>
-      <div
-        className={`flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-no-repeat bg-cover bg-center h-screen relative`}
-        style={{ backgroundImage: `url(${assets.hero1})` }}
-      >
-        <div className="bg-black/70 absolute top-0 left-0 bottom-0 right-0 h-screen"></div>
-        <div className="flex gap-12 justify-between items-center bottom-10 absolute">
-          <div className="w-full">
-            <h1 className="lg:text-6xl text-gray-200">
-              You Have Questions, <br /> We Have Answers
-            </h1>
-            <p className=" text-[16px] text-xl text-white py-5 w-[50%] pb-6">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Inventore, suscipit? Inventore ducimus hic ratione vero temporibus
-              facilis praesentium quae dolores.
-            </p>
-            <Link
-              to={"/work"}
-              className="text-[16px] bg-orange-600 lg:px-10 lg:py-3 rounded w-fit px-4 py-2 cursor-pointer sm:mb-4 md:mb-4"
-            >
-              Explore Our Projects
-            </Link>
-          </div>
-          <div className="flex flex-col px-24 gap-12">
-            <form className="bg-white p-6 rounded-2xl text-black w-full">
-              <div className="py-4">
-                <h3 className="text-gray-700 text-2xl capitalize">
-                  Tell us what you need
-                </h3>
-                <p className="text-gray-600 pb-6 text-[14px]">
-                  Our team is ready to assit you with your project
-                </p>
-              </div>
-              <div className="lg:flex gap-3">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="p-3 border  text-gray-500 text-[14px] border-gray-400 rounded mb-3 outline-none"
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="p-3 border  text-gray-500 text-[14px] border-gray-400 rounded mb-3 outline-none"
-                />
-              </div>
-              <div className="lg:flex gap-3 mb-3">
-                <input
-                  type="text"
-                  placeholder="Phone"
-                  className="p-3 border  text-gray-500 text-[14px] border-gray-400 rounded outline-none"
-                />
-                <input
-                  type="text"
-                  placeholder="Country"
-                  className="p-3 border  text-gray-500 text-[14px] border-gray-400 rounded outline-none"
-                />
-              </div>
-              <input
-                type="email"
-                placeholder="Email"
-                className="p-3 border  text-gray-500 text-[14px] border-gray-400 rounded flex flex-col w-full mb-3 outline-none"
+    <>
+      
+      <section className="relative h-screen bg-black flex flex-col md:flex-row justify-center px-4 py-20 gap-20 pt-30">
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none mb-10 size-140 bg-green-500/35 rounded-full blur-[200px]"></div>
+
+        <div className="text-center md:text-left mt-12">
+          <div className="flex items-center  p-1.5 rounded-full border border-green-900 text-xs w-fit mx-auto md:mx-0">
+            <div className="flex items-center">
+              <img
+                className="size-7 rounded-full border border-green-900"
+                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50"
+                alt="userImage1"
               />
+              <img
+                className="size-7 rounded-full border border-green-900 -translate-x-2"
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50"
+                alt="userImage2"
+              />
+              <img
+                className="size-7 rounded-full border border-green-900 -translate-x-4"
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&h=50&auto=format&fit=crop"
+                alt="userImage3"
+              />
+            </div>
+            <p className="-translate-x-2 text-xs text-slate-200">
+              Join community of 1m+ founders{" "}
+            </p>
+          </div>
+          <h1 className="font-medium text-3xl md:text-5xl/15 bg-linear-to-r max-md:mx-auto from-white to-green-300 bg-clip-text text-transparent max-w-[470px] mt-4">
+            Ready to Transform Your Digital Experience?
+          </h1>
+          <p className="text-sm/6 text-white max-w-[345px] mt-4 mx-auto md:mx-0">
+            Let our design team craft a website that elevates your brand. Book a
+            free session today.
+          </p>
+        </div>
+
+        <div className="w-full max-w-lg max-md:mx-auto bg-[#00A63E]/0 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+          <form className="space-y-6">
+            <div>
+              <label className="block text-white text-sm mb-2">Name</label>
               <input
                 type="text"
-                placeholder="Subject/ Type of Enquiry"
-                className="p-3 border text-gray-500 text-[14px] border-gray-400 rounded flex flex-col w-full mb-3 outline-none"
+                required
+                placeholder="Eden Johnson"
+                className="w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition"
               />
+            </div>
+
+            <div>
+              <label className="block text-white text-sm mb-2">Email</label>
+              <input
+                type="email"
+                required
+                placeholder="Eden@example.com"
+                className="w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition"
+              />
+            </div>
+
+            <div>
+              <label className="block text-white text-sm mb-2">Message</label>
               <textarea
-                name=""
-                placeholder="message"
-                className="p-3 border text-gray-500 text-[14px] border-gray-400 rounded flex flex-col w-full mb-3 outline-none"
+                placeholder="Write your message here..."
+                rows="4"
+                required
+                className="w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition resize-none"
               ></textarea>
-              {/* <button
+            </div>
+
+            <div className="flex items-center justify-between">
+              <p className="text-xs md:text-sm text-white/60 max-w-3xs">
+                By submitting, you agree to our{" "}
+                <span className="text-white">Terms</span> and{" "}
+                <span className="text-white">Privacy Policy</span>.
+              </p>
+              <button
                 type="submit"
-                className="text-[14px] text-gray-400 border border-gray-400 hover:bg-gray-100 hover:border-none lg:px-10 lg:py-3 rounded w-full px-4 py-2 cursor-pointer sm:mb-4 md:mb-4"
+                className="bg-linear-to-r from-green-950 to-green-600 hover:from-green-600 hover:to-green-950 text-white text-sm px-8 md:px-16 py-3 rounded-full transition duration-300 cursor-pointer"
               >
                 Submit
-              </button> */}
-              <Button type={"submit"} text={"submit"} />
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col justify-between bg-gray-100 items-center gap-24 py-20 px-6 md:px-16 lg:px-24 xl:px-32">
-        <div className=" flex justify-between gap-8 ">
-          <div className="bg-black/50  p-8 text-white rounded">
-            <p>
-              Place Mall
-              <br /> Flower Port Spintex <br /> Opposite the Over head
-            </p>
-          </div>
-
-          <div className="bg-black/50 p-8 text-white rounded">
-            <h3 className="text-[20px] pb-2 font-semibold">Email</h3>
-            <div>
-              <div>
-                <IoLocationOutline className="text-orange-500 w-28" />
-              </div>
-              <p>info@testa.com</p>
+              </button>
             </div>
-          </div>
-
-          <div className="bg-black/50 p-8 text-white rounded">
-            <h3 className=" text-[20px] pb-2 font-semibold ">Contact</h3>
-            <div>
-              <div>
-                <IoLocationOutline className="text-orange-500 w-28" />
-              </div>
-              <p>0987654321</p>
-            </div>
-          </div>
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
+
 
 export default Contact

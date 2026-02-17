@@ -55,3 +55,36 @@ export const companyLogos = [
   "instagram",
   "facebook",
 ];
+
+
+export const features = [
+  {
+    title: "Grow Your Traffic",
+    description:
+      "Boost your website traffic, sales, visits and overall product revenue.",
+    image:
+      "https://assets.prebuiltui.com/images/components/feature-sections/features-graphs-image.png",
+    alt: "graph",
+    hasTrending: true,
+    imageClass: "max-w-56",
+  },
+  {
+    title: "Team-Friendly Structure",
+    description:
+      "Organize components, variants and layouts that works perfectly for teams.",
+    image:
+      "https://assets.prebuiltui.com/images/components/feature-sections/features-dash-img.png",
+    alt: "dash",
+    hasTrending: false,
+  },
+  {
+    title: "Seamless Integration",
+    description:
+      "Works effortlessly with React, Next.js, Vue and modern technologies.",
+    image:
+      "https://assets.prebuiltui.com/images/components/feature-sections/features-social-image.png",
+    alt: "socialCircle",
+    hasTrending: false,
+    imageClass: "max-w-60",
+  },
+];

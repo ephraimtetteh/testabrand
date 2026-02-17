@@ -6,9 +6,10 @@ import { IoCloseOutline, IoMenuOutline, IoChevronDown } from "react-icons/io5";
 const Navbar = () => {
   const navLinks = [
     { name: "Services", path: "/services", icon: <IoChevronDown /> },
-    { name: "Our work", path: "/work" },
+    { name: "Our work", path: "/our-work" },
     { name: "Why us", path: "/experience" ,icon: <IoChevronDown /> },
     { name: "Pricing", path: "/pricing" },
+    { name: "Contact", path: "/contact-us" },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,9 +38,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed bg-black top-0 left-0 w-full flex items-center justify-between px-3 md:px-6 lg:px-12 xl:px-12 transition-all duration-500 z-50 ${
+      className={`fixed top-0 left-0 w-full flex items-center justify-between px-3 md:px-6 lg:px-12 xl:px-12 transition-all duration-500 z-50 ${
         isScrolled
-          ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-4"
+          ? " backdrop-blur-3xl py-3 md:py-4 text-white/80"
           : "py-4 md:py-6"
       }`}
     >
@@ -91,7 +92,7 @@ const Navbar = () => {
       <div className="hidden md:flex items-center ">
         <button
           className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${
-            isScrolled ? "text-white bg-black" : "bg-white text-black"
+            isScrolled ? "text-white border-white border" : "bg-white text-black"
           }`}
         >
           Book a Demo
@@ -99,7 +100,7 @@ const Navbar = () => {
         <button
           className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${
             isScrolled
-              ? "text-white bg-transparent"
+              ? "text-gray-700 bg-white"
               : "bg-transparent text-white border border-white"
           }`}
         >
